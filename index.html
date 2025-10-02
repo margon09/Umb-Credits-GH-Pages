@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link id="app-favicon" rel="icon" href="/dark.ico" type="image/x-icon" />
+    <!-- <link rel="preload" as="image" href="/assets/login/login_background.png" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Disables all transitions until the app sets data-mounted */
+      :root:not([data-mounted]) * {
+        transition: none !important;
+        animation: none !important;
+      }
+    </style>
+
+    <script>
+      ;(function () {
+        try {
+          var key = 'umbraco-theme-mode'
+          var saved = localStorage.getItem(key)
+          var systemDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+          var effective =
+            saved === 'dark'
+              ? 'dark'
+              : saved === 'light'
+                ? 'light'
+                : systemDark
+                  ? 'dark'
+                  : 'light'
+          document.documentElement.setAttribute('data-theme', effective)
+          var bg = effective === 'dark' ? '#383B43' : '#ffffff'
+          document.documentElement.style.background = bg
+          document.body.style.background = bg
+        } catch (e) {}
+      })()
+    </script>
+
+    <title>Umbraco Credits</title>
+    <script type="module" crossorigin src="/assets/index-CtR4jyxL.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-fVXvAP8Z.js">
+    <link rel="modulepreload" crossorigin href="/assets/query-DJ2Df_pl.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-kcDNZBP3.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DK5grVoZ.css">
+  </head>
+
+  <body>
+    <noscript>
+      <div style="padding: 1rem; font-family: system-ui, sans-serif">
+        This app requires JavaScript to run.
+      </div>
+    </noscript>
+
+    <div id="root"></div>
+  </body>
+</html>

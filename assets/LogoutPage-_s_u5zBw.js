@@ -1,0 +1,1 @@
+import{j as o}from"./query-DJ2Df_pl.js";import{b as e}from"./index-CtR4jyxL.js";import{d as r,r as s}from"./react-fVXvAP8Z.js";import"./i18n-kcDNZBP3.js";function a(){const t=r();return s.useEffect(()=>{localStorage.removeItem("isAuthed"),t("/login",{replace:!0})},[t]),null}const l=()=>(e("noindex,nofollow"),o.jsx(o.Fragment,{children:o.jsx(a,{})}));export{l as default};
